@@ -1,0 +1,9 @@
+---
+ - hosts: slave8
+   become: true
+   tasks:
+     - name: create a file
+       file:
+        path: /root/hyd.txt
+        state: touch
+        mode: 0777
